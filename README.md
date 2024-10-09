@@ -85,6 +85,8 @@ response = rekognition.detect_labels(
 for label in response['Labels']:
     print(f"Objeto detectado: {label['Name']}, Confianza: {label['Confidence']:.2f}%")
 
+    ``` 
+
 ### Reconocimiento de Imágenes con Amazon Rekognition
 
 Reconocimiento de Imágenes con Amazon Rekognition
@@ -99,6 +101,8 @@ Detección de contenido explícito o sugerente en imágenes
 Ejemplo de uso:
 
 # Configuración del cliente de Rekognition
+
+```python	
 rekognition = boto3.client('rekognition',
                            aws_access_key_id=access_key_id,
                            aws_secret_access_key=secret_access_key,
@@ -142,6 +146,8 @@ if response['FaceMatches']:
     print(f"Coincidencia encontrada con similitud del {response['FaceMatches'][0]['Similarity']:.2f}%")
 else:
     print("No se encontraron coincidencias")
+
+```
 
 ## Notas Importantes
 
